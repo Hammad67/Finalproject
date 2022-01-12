@@ -1,0 +1,29 @@
+
+<table class="table table-dark">
+  <thead>
+  <tr>
+    <th scope="col">First-Name</th>
+    <th scope="col">Last-Name</th>
+    <th scope="col">Address</th>
+    <th scope="col">Phone-Number</th>
+    <th scope="col">Email</th>
+    <th scope="col">Details</th>
+
+
+  </tr>
+  </thead>
+  <%@user.each do |user|%>
+
+    <tbody>
+    <tr>
+      <td><%=user.firstname %></td>
+      <td><%=user.lastname %></td>
+      <td><%=user.address %></td>
+      <td><%=user.phone %></td>
+      <td><%=user.email %></td>
+      <td><%=link_to"View Details",user_path(user),class:"btn btn-primary"%></td>
+    </tr>
+
+    </tbody>
+  <%end %>
+</table>
