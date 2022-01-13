@@ -1,0 +1,22 @@
+<div class="card-body">
+  <h5 class="card-title">Product-Name:<%= @product.name%></h5>
+  <p class="card-text"><h3>Description:</h3><%= @product.product_desc%>.</p>
+  <h6>Colour:<%=@product.colour%></h6>
+  <h6>Size:<%= @product.size%></h6>
+  <h6>Price:<%= @product.price%></h6>
+  <%=link_to "Edit" ,edit_product_path(@product),class:"btn btn-warning"%>
+  <%=button_to"Delete" ,product_path(@product), method: :delete,class:"btn btn-danger"%>
+
+
+
+
+
+
+
+
+
+
+  <%if current_user.has_role?"admin"%>
+  <%=link_to"Dashbord",admins_path,class:"btn btn-info" %>
+    <%end%>
+</div>

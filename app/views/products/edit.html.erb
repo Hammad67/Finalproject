@@ -1,0 +1,11 @@
+<%= simple_form_for @product do |f| %>
+  <%= f.input :name %>
+  <%= f.input :product_desc %>
+  <%= f.input :size %>
+  <%= f.input :colour %>
+  <%= f.input :price %><br>
+  <%= f.file_field :image, class: "form-field" %>
+  <%= f.submit :Update,class:"btn btn-info" %>
+
+
+<% end %>
